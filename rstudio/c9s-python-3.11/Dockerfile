@@ -30,11 +30,11 @@ RUN yum install -y yum-utils && \
 
 # set R library to default (used in install.r from littler)
 RUN chmod -R a+w /usr/lib64/R/library
-ENV LIBLOC /usr/lib64/R/library
+ENV LIBLOC=/usr/lib64/R/library
 
 # set User R Library path
 RUN mkdir -p /opt/app-root/bin/Rpackages/4.4 && chmod -R a+w /opt/app-root/bin/Rpackages/4.4
-ENV R_LIBS_USER /opt/app-root/bin/Rpackages/4.4
+ENV R_LIBS_USER=/opt/app-root/bin/Rpackages/4.4
 
 WORKDIR /tmp/
 

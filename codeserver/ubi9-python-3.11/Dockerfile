@@ -112,7 +112,7 @@ COPY ${SOURCE_CODE}/nginx/api/ /opt/app-root/api/
 # Launcher
 COPY --chown=1001:0 ${SOURCE_CODE}/run-code-server.sh ${SOURCE_CODE}/run-nginx.sh ./
 
-ENV SHELL /bin/bash
+ENV SHELL=/bin/bash
 
 ENV PYTHONPATH=/opt/app-root/bin/python3
 
